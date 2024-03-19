@@ -7,7 +7,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.pl.PESEL;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,6 +17,8 @@ import static com.lewandowskijan.itrunrecruitmentproject.model.constraints.Perso
 
 @Data
 @Document
+@AllArgsConstructor
+@NoArgsConstructor
 @JacksonXmlRootElement(localName = "person")
 public class Person {
 
